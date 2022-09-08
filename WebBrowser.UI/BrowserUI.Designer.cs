@@ -32,6 +32,7 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newTabToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeCurrentTabToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.savePageAsHTMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +51,8 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newTabToolStripMenuItem,
-            this.closeCurrentTabToolStripMenuItem});
+            this.closeCurrentTabToolStripMenuItem,
+            this.savePageAsHTMLToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
@@ -66,6 +68,12 @@
             this.closeCurrentTabToolStripMenuItem.Name = "closeCurrentTabToolStripMenuItem";
             this.closeCurrentTabToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.closeCurrentTabToolStripMenuItem.Text = "Close Current Tab";
+            // 
+            // savePageAsHTMLToolStripMenuItem
+            // 
+            this.savePageAsHTMLToolStripMenuItem.Name = "savePageAsHTMLToolStripMenuItem";
+            this.savePageAsHTMLToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.savePageAsHTMLToolStripMenuItem.Text = "Save Page as HTML";
             // 
             // BrowserUI
             // 
@@ -90,5 +98,6 @@
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newTabToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeCurrentTabToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem savePageAsHTMLToolStripMenuItem;
     }
 }
