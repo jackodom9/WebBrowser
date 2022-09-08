@@ -48,6 +48,7 @@
             this.homeButton = new System.Windows.Forms.ToolStripButton();
             this.addressBarTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.goButton = new System.Windows.Forms.ToolStripButton();
+            this.bookmarksButton = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -153,7 +154,8 @@
             this.refreshButton,
             this.homeButton,
             this.addressBarTextBox,
-            this.goButton});
+            this.goButton,
+            this.bookmarksButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 30);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(800, 31);
@@ -211,6 +213,15 @@
             this.goButton.Size = new System.Drawing.Size(29, 28);
             this.goButton.Text = "toolStripButton1";
             // 
+            // bookmarksButton
+            // 
+            this.bookmarksButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bookmarksButton.Image = ((System.Drawing.Image)(resources.GetObject("bookmarksButton.Image")));
+            this.bookmarksButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.bookmarksButton.Name = "bookmarksButton";
+            this.bookmarksButton.Size = new System.Drawing.Size(29, 28);
+            this.bookmarksButton.Text = "toolStripButton1";
+            // 
             // BrowserUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -252,5 +263,6 @@
         private System.Windows.Forms.ToolStripButton homeButton;
         private System.Windows.Forms.ToolStripTextBox addressBarTextBox;
         private System.Windows.Forms.ToolStripButton goButton;
+        private System.Windows.Forms.ToolStripButton bookmarksButton;
     }
 }
