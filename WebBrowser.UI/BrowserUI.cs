@@ -35,5 +35,10 @@ namespace WebBrowser.UI
                 "903526855\nUsername: jeo0011";
             MessageBox.Show(message);
         }
+
+        private void goButton_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Navigate(addressBarTextBox.Text);
+        }
     }
 }

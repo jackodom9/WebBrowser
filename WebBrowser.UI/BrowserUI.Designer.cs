@@ -67,7 +67,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -161,9 +161,9 @@
             this.addressBarTextBox,
             this.goButton,
             this.bookmarksButton});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 30);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(800, 27);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -173,7 +173,7 @@
             this.backButton.Image = ((System.Drawing.Image)(resources.GetObject("backButton.Image")));
             this.backButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(29, 28);
+            this.backButton.Size = new System.Drawing.Size(29, 24);
             this.backButton.Text = "toolStripButton1";
             // 
             // forwardButton
@@ -215,8 +215,9 @@
             this.goButton.Image = ((System.Drawing.Image)(resources.GetObject("goButton.Image")));
             this.goButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.goButton.Name = "goButton";
-            this.goButton.Size = new System.Drawing.Size(29, 28);
+            this.goButton.Size = new System.Drawing.Size(29, 24);
             this.goButton.Text = "toolStripButton1";
+            this.goButton.Click += new System.EventHandler(this.goButton_Click);
             // 
             // bookmarksButton
             // 
@@ -231,10 +232,10 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 61);
+            this.tabControl1.Location = new System.Drawing.Point(0, 55);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(800, 389);
+            this.tabControl1.Size = new System.Drawing.Size(800, 395);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -243,7 +244,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(792, 360);
+            this.tabPage1.Size = new System.Drawing.Size(792, 366);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -254,7 +255,7 @@
             this.webBrowser1.Location = new System.Drawing.Point(3, 3);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(786, 354);
+            this.webBrowser1.Size = new System.Drawing.Size(786, 360);
             this.webBrowser1.TabIndex = 0;
             // 
             // BrowserUI
