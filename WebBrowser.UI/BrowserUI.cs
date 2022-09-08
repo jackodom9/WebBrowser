@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace WebBrowser.UI
 {
-    public partial class Form1 : Form
+    public partial class BrowserUI : Form
     {
-        public Form1()
+        public BrowserUI()
         {
             InitializeComponent();
+        }
+
+        private void BrowserUI_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
