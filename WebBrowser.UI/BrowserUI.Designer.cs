@@ -207,7 +207,8 @@
             // 
             this.addressBarTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.addressBarTextBox.Name = "addressBarTextBox";
-            this.addressBarTextBox.Size = new System.Drawing.Size(100, 31);
+            this.addressBarTextBox.Size = new System.Drawing.Size(100, 27);
+            this.addressBarTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.addressBarTextBox_KeyUp);
             // 
             // goButton
             // 

@@ -40,5 +40,13 @@ namespace WebBrowser.UI
         {
             webBrowser1.Navigate(addressBarTextBox.Text);
         }
+
+        private void addressBarTextBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode ==Keys.Enter)
+            {
+                goButton_Click(sender, e);
+            }
+        }
     }
 }
