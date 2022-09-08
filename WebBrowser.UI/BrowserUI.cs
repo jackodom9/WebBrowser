@@ -21,5 +21,10 @@ namespace WebBrowser.UI
         {
 
         }
+
+        private void exitWebBrowserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
