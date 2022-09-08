@@ -26,5 +26,14 @@ namespace WebBrowser.UI
         {
             Application.Exit();
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string message = "This is a tool for users to browse different web pages. " +
+                "Make sure to explore the menu options to familiarize yourself with the" +
+                " controls. Created for CPSC 2710.\nCreated By: Jack Odom\nStudent ID: " +
+                "903526855\nUsername: jeo0011";
+            MessageBox.Show(message);
+        }
     }
 }
