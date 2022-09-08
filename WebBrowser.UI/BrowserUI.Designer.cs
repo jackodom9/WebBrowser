@@ -36,6 +36,7 @@
             this.printPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitWebBrowserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,9 +97,17 @@
             // 
             // toolsToolStripMenuItem
             // 
+            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.manageHistoryToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
             this.toolsToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
             this.toolsToolStripMenuItem.Text = "Tools";
+            // 
+            // manageHistoryToolStripMenuItem
+            // 
+            this.manageHistoryToolStripMenuItem.Name = "manageHistoryToolStripMenuItem";
+            this.manageHistoryToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.manageHistoryToolStripMenuItem.Text = "Manage History";
             // 
             // BrowserUI
             // 
@@ -127,5 +136,6 @@
         private System.Windows.Forms.ToolStripMenuItem printPageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitWebBrowserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manageHistoryToolStripMenuItem;
     }
 }
