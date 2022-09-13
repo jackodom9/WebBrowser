@@ -76,6 +76,7 @@
             this.forwardButton.Name = "forwardButton";
             this.forwardButton.Size = new System.Drawing.Size(24, 24);
             this.forwardButton.Text = "toolStripButton1";
+            this.forwardButton.Click += new System.EventHandler(this.forwardButton_Click);
             // 
             // refreshButton
             // 

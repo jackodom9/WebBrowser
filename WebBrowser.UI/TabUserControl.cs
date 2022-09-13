@@ -39,5 +39,10 @@ namespace WebBrowser.UI
         {
             webBrowser1.GoBack();
         }
+
+        private void forwardButton_Click(object sender, EventArgs e)
+        {
+            webBrowser1.GoForward();
+        }
     }
 }
