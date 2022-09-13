@@ -34,5 +34,10 @@ namespace WebBrowser.UI
         {
             webBrowser1.Refresh();
         }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            webBrowser1.GoBack();
+        }
     }
 }

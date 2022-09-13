@@ -66,6 +66,7 @@
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(24, 24);
             this.backButton.Text = "toolStripButton1";
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // forwardButton
             // 
