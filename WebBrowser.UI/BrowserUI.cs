@@ -45,5 +45,13 @@ namespace WebBrowser.UI
         {
             
         }
+
+        private void BrowserUI_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && (e.KeyCode == Keys.T))
+            {
+                this.tabControl1.TabPages.Add(new TabPage("New Tab"));
+            }
+        }
     }
 }

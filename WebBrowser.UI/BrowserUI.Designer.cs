@@ -180,11 +180,13 @@
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
+            this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "BrowserUI";
             this.Text = "BrowserUI";
             this.Load += new System.EventHandler(this.BrowserUI_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BrowserUI_KeyDown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
