@@ -56,6 +56,11 @@ namespace WebBrowser.UI
                 newTab.Controls.Add(newTabUserControl);
                 this.tabControl1.TabPages.Add(newTab);
             }
+
+            if (e.Control && (e.KeyCode == Keys.W))
+            {
+                this.tabControl1.TabPages.RemoveAt(this.tabControl1.SelectedIndex);
+            }
         }
     }
 }
