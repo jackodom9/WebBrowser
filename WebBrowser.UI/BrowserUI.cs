@@ -50,7 +50,11 @@ namespace WebBrowser.UI
         {
             if (e.Control && (e.KeyCode == Keys.T))
             {
-                this.tabControl1.TabPages.Add(new TabPage("New Tab"));
+                TabPage newTab = new TabPage("New Tab");
+                TabUserControl newTabUserControl = new TabUserControl();
+                newTabUserControl.Dock = DockStyle.Fill;
+                newTab.Controls.Add(newTabUserControl);
+                this.tabControl1.TabPages.Add(newTab);
             }
         }
     }
