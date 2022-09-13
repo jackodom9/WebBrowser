@@ -42,8 +42,10 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabUserControl1 = new WebBrowser.UI.TabUserControl();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -152,6 +154,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.tabUserControl1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage1.Name = "tabPage1";
@@ -160,6 +163,15 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabUserControl1
+            // 
+            this.tabUserControl1.BackColor = System.Drawing.Color.White;
+            this.tabUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabUserControl1.Location = new System.Drawing.Point(2, 2);
+            this.tabUserControl1.Name = "tabUserControl1";
+            this.tabUserControl1.Size = new System.Drawing.Size(588, 312);
+            this.tabUserControl1.TabIndex = 0;
             // 
             // BrowserUI
             // 
@@ -176,6 +188,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,5 +210,6 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
+        public TabUserControl tabUserControl1;
     }
 }

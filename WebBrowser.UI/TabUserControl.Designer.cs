@@ -99,6 +99,7 @@
             this.addressBarTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.addressBarTextBox.Name = "addressBarTextBox";
             this.addressBarTextBox.Size = new System.Drawing.Size(76, 27);
+            this.addressBarTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.addressBarTextBox_KeyUp);
             // 
             // goButton
             // 
@@ -108,6 +109,7 @@
             this.goButton.Name = "goButton";
             this.goButton.Size = new System.Drawing.Size(24, 24);
             this.goButton.Text = "toolStripButton1";
+            this.goButton.Click += new System.EventHandler(this.goButton_Click);
             // 
             // bookmarksButton
             // 
