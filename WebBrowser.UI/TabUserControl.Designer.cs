@@ -84,6 +84,7 @@
             this.refreshButton.Name = "refreshButton";
             this.refreshButton.Size = new System.Drawing.Size(24, 24);
             this.refreshButton.Text = "toolStripButton1";
+            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
             // 
             // homeButton
             // 

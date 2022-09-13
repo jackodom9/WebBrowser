@@ -29,5 +29,10 @@ namespace WebBrowser.UI
                 goButton_Click(sender, e);
             }
         }
+
+        private void refreshButton_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Refresh();
+        }
     }
 }
