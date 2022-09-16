@@ -50,17 +50,27 @@ namespace WebBrowser.UI
         {
             if (e.Control && (e.KeyCode == Keys.T))
             {
-                TabPage newTab = new TabPage("New Tab");
-                TabUserControl newTabUserControl = new TabUserControl();
-                newTabUserControl.Dock = DockStyle.Fill;
-                newTab.Controls.Add(newTabUserControl);
-                this.tabControl1.TabPages.Add(newTab);
+                newTabToolStripMenuItem_Click(sender, e);
             }
 
             if (e.Control && (e.KeyCode == Keys.W))
             {
-                this.tabControl1.TabPages.RemoveAt(this.tabControl1.SelectedIndex);
+                closeCurrentTabToolStripMenuItem_Click(sender, e);
             }
+        }
+
+        private void newTabToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TabPage newTab = new TabPage("New Tab");
+            TabUserControl newTabUserControl = new TabUserControl();
+            newTabUserControl.Dock = DockStyle.Fill;
+            newTab.Controls.Add(newTabUserControl);
+            this.tabControl1.TabPages.Add(newTab);
+        }
+
+        private void closeCurrentTabToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.tabControl1.TabPages.RemoveAt(this.tabControl1.SelectedIndex);
         }
     }
 }
