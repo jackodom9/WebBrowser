@@ -53,5 +53,14 @@ namespace WebBrowser.UI
             item.URL = webBrowser1.Url.ToString();
             BookmarkManager.AddItem(item);
         }
+
+        private void webBrowser1_Navigated(object sender, WebBrowserNavigatedEventArgs e)
+        {
+            var item = new HistoryItem();
+            item.Title = webBrowser1.DocumentTitle;
+            item.URL = webBrowser1.Url.ToString();
+            item.Date = DateTime.Now;
+            HistoryManager.AddItem(item);
+        }
     }
 }
