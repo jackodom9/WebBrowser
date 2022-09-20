@@ -51,7 +51,23 @@ namespace WebBrowser.UI
             var item = new BookmarkItem();
             item.Title = webBrowser1.DocumentTitle;
             item.URL = webBrowser1.Url.ToString();
-            BookmarkManager.AddItem(item);
+            var currentBookmarks = BookmarkManager.GetItems();
+            bool bookmarkCreated = false;
+            foreach (var bookmark in currentBookmarks)
+            {
+                if (bookmark.Title == item.Title && bookmark.URL == item.URL)
+                {
+                    bookmarkCreated = true;
+                }
+            }
+            if (bookmarkCreated == false)
+            {
+                BookmarkManager.AddItem(item);
+            }
+            else
+            {
+                MessageBox.Show("Bookmark already exists!");
+            }
         }
 
         private void webBrowser1_Navigated(object sender, WebBrowserNavigatedEventArgs e)
