@@ -25,7 +25,7 @@ namespace WebBrowser.UI
 
             foreach(var item in items)
             {
-                listBoxHistoryManager.Items.Add(string.Format("[{0}] {1} ({3})", item.Date.ToString(), item.Title, item.URL));
+                listBoxHistoryManager.Items.Add(string.Format("[{0}] {1} ({2})", item.Date.ToString(), item.Title, item.URL));
 
             }
         }
