@@ -45,7 +45,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WebBroser.Data\WebBrowser.Data.csproj">
+    <ProjectReference Include="..\WebBrowser.Data\WebBrowser.Data.csproj">
       <Project>{c3efad1d-fe72-4bab-8777-e1b5fb56c975}</Project>
       <Name>WebBrowser.Data</Name>
     </ProjectReference>

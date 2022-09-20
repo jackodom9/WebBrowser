@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBrowser.UI", "WebBrowser
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBrowser.Logic", "WebBrowser.Logic\WebBrowser.Logic.csproj", "{D2D49317-EF49-430B-95F2-008DE6EB7B72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBrowser.Data", "WebBroser.Data\WebBrowser.Data.csproj", "{C3EFAD1D-FE72-4BAB-8777-E1B5FB56C975}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBrowser.Data", "WebBrowser.Data\WebBrowser.Data.csproj", "{C3EFAD1D-FE72-4BAB-8777-E1B5FB56C975}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
