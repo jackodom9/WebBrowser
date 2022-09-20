@@ -77,5 +77,11 @@ namespace WebBrowser.UI
         {
 
         }
+
+        private void manageHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HistoryManagerForm historyManagerForm = new HistoryManagerForm();
+            historyManagerForm.ShowDialog();
+        }
     }
 }
