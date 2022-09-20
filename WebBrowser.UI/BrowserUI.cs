@@ -72,5 +72,10 @@ namespace WebBrowser.UI
         {
             this.tabControl1.TabPages.RemoveAt(this.tabControl1.SelectedIndex);
         }
+
+        private void tabUserControl1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

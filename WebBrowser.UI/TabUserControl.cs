@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WebBrowser.Logic;
 
 namespace WebBrowser.UI
 {
@@ -43,6 +44,14 @@ namespace WebBrowser.UI
         private void forwardButton_Click(object sender, EventArgs e)
         {
             webBrowser1.GoForward();
+        }
+
+        private void bookmarksButton_Click(object sender, EventArgs e)
+        {
+            var item = new BookmarkItem();
+            item.Title = webBrowser1.DocumentTitle;
+            item.URL = webBrowser1.Url.ToString();
+            BookmarkManager.AddItem(item);
         }
     }
 }
