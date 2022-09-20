@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookmarkManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookmarkManagerForm.Designer.cs">
+      <DependentUpon>BookmarkManagerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="BrowserUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     <Compile Include="TabUserControl.Designer.cs">
       <DependentUpon>TabUserControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BookmarkManagerForm.resx">
+      <DependentUpon>BookmarkManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BrowserUI.resx">
       <DependentUpon>BrowserUI.cs</DependentUpon>
     </EmbeddedResource>
