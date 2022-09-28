@@ -42,5 +42,19 @@ namespace WebBrowser.Logic
             }
             adapter.Update(rows);
         }
+
+        public static void DeleteItem(int Id, string Title, string URL, DateTime Date)
+        {
+            var adapter = new HistoryTableAdapter();
+            var rows = adapter.GetData();
+            foreach (var row in rows)
+            {
+                if (row.Date.ToString().Equals(Date.ToString()))
+                {
+                    row.Delete();
+                }
+            }
+            adapter.Update(rows);
+        }
     }
 }

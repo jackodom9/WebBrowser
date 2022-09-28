@@ -49,13 +49,24 @@ namespace WebBrowser.UI
 
         private void btnHistoryManagerDelete_Click(object sender, EventArgs e)
         {
+            string itemStr = (string)listBoxHistoryManager.SelectedItem;
+            int index = listBoxHistoryManager.SelectedIndex;
             listBoxHistoryManager.Items.RemoveAt(listBoxHistoryManager.SelectedIndex);
+            string URL = getSubStringFromString("(", ")", itemStr);
+            string title = getSubStringFromString("]", "(", itemStr);
+            DateTime date = DateTime.Parse(getSubStringFromString("[", "]", itemStr));
+            HistoryManager.DeleteItem(index, title, URL, date);
         }
 
         private void btnClearHistory_Click(object sender, EventArgs e)
         {
             listBoxHistoryManager.Items.Clear();
             HistoryManager.ClearItems();
+        }
+
+        private string getSubStringFromString(string begin, string end, string result)
+        {
+            return result.Substring((result.IndexOf(begin) + begin.Length), (result.IndexOf(end) - result.IndexOf(begin) - begin.Length));
         }
     }
 }
