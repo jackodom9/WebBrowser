@@ -77,6 +77,7 @@ namespace WebBrowser.UI
             item.URL = webBrowser1.Url.ToString();
             item.Date = DateTime.Now;
             HistoryManager.AddItem(item);
+
         }
 
         private void webBrowser1_ProgressChanged(object sender, WebBrowserProgressChangedEventArgs e)
@@ -91,6 +92,10 @@ namespace WebBrowser.UI
             {
                 toolStripStatusLabel1.Text = "loading";
             }
+        }
+
+        private void webBrowser1_Navigating(object sender, WebBrowserNavigatingEventArgs e)
+        {
         }
     }
 }

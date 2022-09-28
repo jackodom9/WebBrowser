@@ -38,12 +38,12 @@ namespace WebBrowser.UI
 
         private void goButton_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void addressBarTextBox_KeyUp(object sender, KeyEventArgs e)
         {
-            
+
         }
 
         private void BrowserUI_KeyDown(object sender, KeyEventArgs e)
@@ -89,5 +89,21 @@ namespace WebBrowser.UI
             BookmarkManagerForm bookmarkManagerForm = new BookmarkManagerForm();
             bookmarkManagerForm.ShowDialog();
         }
+
+        private void browserMouseMoved(object sender, HtmlElementEventArgs e)
+        {
+            string element = tabUserControl1.webBrowser1.Document.GetElementFromPoint(e.ClientMousePosition).GetAttribute("href");
+
+            tabUserControl1.toolStripStatusLabel2.Text = "Link = " + element;
+        }
+
+        private void BrowserUI_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (tabUserControl1.webBrowser1.ClientRectangle.Contains(Cursor.Position))
+            {
+                tabUserControl1.webBrowser1.Document.MouseOver += new HtmlElementEventHandler(this.browserMouseMoved);
+            }
+        }
+
     }
 }
