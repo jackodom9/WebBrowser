@@ -53,7 +53,17 @@ namespace WebBrowser.UI
 
         private void btnBookmarkDelete_Click(object sender, EventArgs e)
         {
+            string itemStr = (string)listBoxBookmarkManager.SelectedItem;
+            int index = listBoxBookmarkManager.SelectedIndex;
+            string URL = getSubStringFromString("(", ")", itemStr);
+            string title = itemStr.Split('(')[0];
+            BookmarkManager.DeleteItem(index, title, URL);
             listBoxBookmarkManager.Items.RemoveAt(listBoxBookmarkManager.SelectedIndex);
+        }
+
+        private string getSubStringFromString(string begin, string end, string result)
+        {
+            return result.Substring((result.IndexOf(begin) + begin.Length), (result.IndexOf(end) - result.IndexOf(begin) - begin.Length));
         }
     }
 }

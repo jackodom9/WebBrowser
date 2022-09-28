@@ -48,25 +48,28 @@ namespace WebBrowser.UI
 
         private void bookmarksButton_Click(object sender, EventArgs e)
         {
-            var item = new BookmarkItem();
-            item.Title = webBrowser1.DocumentTitle;
-            item.URL = webBrowser1.Url.ToString();
-            var currentBookmarks = BookmarkManager.GetItems();
-            bool bookmarkCreated = false;
-            foreach (var bookmark in currentBookmarks)
+            if (webBrowser1.DocumentTitle != "")
             {
-                if (bookmark.Title == item.Title && bookmark.URL == item.URL)
+                var item = new BookmarkItem();
+                item.Title = webBrowser1.DocumentTitle;
+                item.URL = webBrowser1.Url.ToString();
+                var currentBookmarks = BookmarkManager.GetItems();
+                bool bookmarkCreated = false;
+                foreach (var bookmark in currentBookmarks)
                 {
-                    bookmarkCreated = true;
+                    if (bookmark.Title == item.Title && bookmark.URL == item.URL)
+                    {
+                        bookmarkCreated = true;
+                    }
                 }
-            }
-            if (bookmarkCreated == false)
-            {
-                BookmarkManager.AddItem(item);
-            }
-            else
-            {
-                MessageBox.Show("Bookmark already exists!");
+                if (bookmarkCreated == false)
+                {
+                    BookmarkManager.AddItem(item);
+                }
+                else
+                {
+                    MessageBox.Show("Bookmark already exists!");
+                }
             }
         }
 

@@ -30,5 +30,19 @@ namespace WebBrowser.Logic
             }
             return results;
         }
+
+        public static void DeleteItem(int Id, string Title, string URL)
+        {
+            var adapter = new BookmarksTableAdapter();
+            var rows = adapter.GetData();
+            foreach (var row in rows)
+            {
+                if (row.URL.Equals(URL))
+                {
+                    row.Delete();
+                }
+            }
+            adapter.Update(rows);
+        }
     }
 }
