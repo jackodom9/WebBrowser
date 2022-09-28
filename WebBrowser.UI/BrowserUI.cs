@@ -62,11 +62,12 @@ namespace WebBrowser.UI
 
         private void newTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TabPage newTab = new TabPage("New Tab");
+            TabPage newTab = new TabPage("New Tab        ");
             TabUserControl newTabUserControl = new TabUserControl();
             newTabUserControl.Dock = DockStyle.Fill;
             newTab.Controls.Add(newTabUserControl);
-            this.tabControl1.TabPages.Add(newTab);
+            var lastIndex = this.tabControl1.TabCount - 1;
+            this.tabControl1.TabPages.Insert(lastIndex, newTab);
         }
 
         private void closeCurrentTabToolStripMenuItem_Click(object sender, EventArgs e)
@@ -116,6 +117,33 @@ namespace WebBrowser.UI
         private void clearHistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HistoryManager.ClearItems();
+        }
+
+        private void tabControl1_MouseDown(object sender, MouseEventArgs e)
+        {
+            var lastIndex = this.tabControl1.TabCount - 1;
+            if (this.tabControl1.GetTabRect(lastIndex).Contains(e.Location))
+            {
+                newTabToolStripMenuItem_Click(sender, e);
+            }
+            for (int i = 0; i < this.tabControl1.TabPages.Count; i++)
+            {
+                Rectangle rect = tabControl1.GetTabRect(i);
+
+                Rectangle closeButton = new Rectangle(rect.Right - 15, rect.Top + 4, 9, 7);
+                if (closeButton.Contains(e.Location))
+                {
+                    this.tabControl1.TabPages.RemoveAt(i);
+                   
+                }
+            }
+        }
+
+        private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            e.Graphics.DrawString("x", e.Font, Brushes.Black, e.Bounds.Right - 15, e.Bounds.Top + 4);
+            e.Graphics.DrawString(this.tabControl1.TabPages[e.Index].Text, e.Font, Brushes.Black, e.Bounds.Left + 12, e.Bounds.Top + 4);
+            e.DrawFocusRectangle();
         }
     }
 }
