@@ -51,5 +51,10 @@ namespace WebBrowser.UI
         {
             listBoxHistoryManager.Items.RemoveAt(listBoxHistoryManager.SelectedIndex);
         }
+
+        private void btnClearHistory_Click(object sender, EventArgs e)
+        {
+            listBoxHistoryManager.Items.Clear();
+        }
     }
 }

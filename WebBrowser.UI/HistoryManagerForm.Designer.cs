@@ -32,6 +32,7 @@
             this.textBoxHistorySearch = new System.Windows.Forms.TextBox();
             this.btnHistorySearch = new System.Windows.Forms.Button();
             this.btnHistoryManagerDelete = new System.Windows.Forms.Button();
+            this.btnClearHistory = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBoxHistoryManager
@@ -71,11 +72,22 @@
             this.btnHistoryManagerDelete.UseVisualStyleBackColor = true;
             this.btnHistoryManagerDelete.Click += new System.EventHandler(this.btnHistoryManagerDelete_Click);
             // 
+            // btnClearHistory
+            // 
+            this.btnClearHistory.Location = new System.Drawing.Point(312, 8);
+            this.btnClearHistory.Name = "btnClearHistory";
+            this.btnClearHistory.Size = new System.Drawing.Size(75, 23);
+            this.btnClearHistory.TabIndex = 4;
+            this.btnClearHistory.Text = "Clear History";
+            this.btnClearHistory.UseVisualStyleBackColor = true;
+            this.btnClearHistory.Click += new System.EventHandler(this.btnClearHistory_Click);
+            // 
             // HistoryManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.btnClearHistory);
             this.Controls.Add(this.btnHistoryManagerDelete);
             this.Controls.Add(this.btnHistorySearch);
             this.Controls.Add(this.textBoxHistorySearch);
@@ -95,5 +107,6 @@
         private System.Windows.Forms.TextBox textBoxHistorySearch;
         private System.Windows.Forms.Button btnHistorySearch;
         private System.Windows.Forms.Button btnHistoryManagerDelete;
+        private System.Windows.Forms.Button btnClearHistory;
     }
 }
