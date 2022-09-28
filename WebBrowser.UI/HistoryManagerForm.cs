@@ -34,15 +34,15 @@ namespace WebBrowser.UI
         {
             var items = HistoryManager.GetItems();
             listBoxHistoryManager.Items.Clear();
-            
-            foreach(var item in items)
+            var searchItem = textBoxHistorySearch.Text.ToLower();
+            foreach (var item in items)
             {
-                var date = item.Date.ToString();
-                var title = item.Title;
-                var URL = item.URL;
+                string date = item.Date.ToString().ToLower();
+                string title = item.Title.ToLower();
+                string URL = item.URL.ToLower();
                 if (date.Contains(textBoxHistorySearch.Text) || title.Contains(textBoxHistorySearch.Text) || date.Contains(textBoxHistorySearch.Text))
                 {
-                    listBoxHistoryManager.Items.Add(string.Format("[{0}] {1} ({2})", date, title, URL));
+                    listBoxHistoryManager.Items.Add(string.Format("[{0}] {1} ({2})", item.Date.ToString(), item.Title, item.URL));
                 }
             }
         }
