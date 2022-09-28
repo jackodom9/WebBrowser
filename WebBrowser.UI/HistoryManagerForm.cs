@@ -55,6 +55,7 @@ namespace WebBrowser.UI
         private void btnClearHistory_Click(object sender, EventArgs e)
         {
             listBoxHistoryManager.Items.Clear();
+            HistoryManager.ClearItems();
         }
     }
 }
