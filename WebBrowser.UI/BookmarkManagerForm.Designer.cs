@@ -70,6 +70,7 @@
             this.btnBookmarkDelete.TabIndex = 3;
             this.btnBookmarkDelete.Text = "Delete";
             this.btnBookmarkDelete.UseVisualStyleBackColor = true;
+            this.btnBookmarkDelete.Click += new System.EventHandler(this.btnBookmarkDelete_Click);
             // 
             // BookmarkManagerForm
             // 

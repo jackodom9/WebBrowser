@@ -50,5 +50,10 @@ namespace WebBrowser.UI
                 }
             }
         }
+
+        private void btnBookmarkDelete_Click(object sender, EventArgs e)
+        {
+            listBoxBookmarkManager.Items.RemoveAt(listBoxBookmarkManager.SelectedIndex);
+        }
     }
 }

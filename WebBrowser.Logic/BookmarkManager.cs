@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WebBroser.Data.BookmarksDataSetTableAdapters;
+using WebBroser.Data.HistoryDataSetTableAdapters;
 
 namespace WebBrowser.Logic
 {
