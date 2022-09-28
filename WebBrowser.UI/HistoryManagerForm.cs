@@ -40,7 +40,7 @@ namespace WebBrowser.UI
                 string date = item.Date.ToString().ToLower();
                 string title = item.Title.ToLower();
                 string URL = item.URL.ToLower();
-                if (date.Contains(textBoxHistorySearch.Text) || title.Contains(textBoxHistorySearch.Text) || date.Contains(textBoxHistorySearch.Text))
+                if (date.Contains(searchItem) || title.Contains(searchItem) || date.Contains(searchItem))
                 {
                     listBoxHistoryManager.Items.Add(string.Format("[{0}] {1} ({2})", item.Date.ToString(), item.Title, item.URL));
                 }
