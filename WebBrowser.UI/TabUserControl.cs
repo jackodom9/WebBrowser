@@ -78,5 +78,11 @@ namespace WebBrowser.UI
             item.Date = DateTime.Now;
             HistoryManager.AddItem(item);
         }
+
+        private void webBrowser1_ProgressChanged(object sender, WebBrowserProgressChangedEventArgs e)
+        {
+            toolStripProgressBar1.Maximum = (int)e.MaximumProgress;
+            toolStripProgressBar1.Value = (int)e.CurrentProgress;
+        }
     }
 }
