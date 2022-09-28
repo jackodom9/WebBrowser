@@ -46,5 +46,10 @@ namespace WebBrowser.UI
                 }
             }
         }
+
+        private void btnHistoryManagerDelete_Click(object sender, EventArgs e)
+        {
+            listBoxHistoryManager.Items.RemoveAt(listBoxHistoryManager.SelectedIndex);
+        }
     }
 }
