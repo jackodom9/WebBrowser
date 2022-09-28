@@ -99,9 +99,16 @@ namespace WebBrowser.UI
 
         private void BrowserUI_MouseMove(object sender, MouseEventArgs e)
         {
-            if (tabUserControl1.webBrowser1.ClientRectangle.Contains(Cursor.Position))
+            try 
+            { 
+                if (tabUserControl1.webBrowser1.ClientRectangle.Contains(Cursor.Position))
+                {
+                    tabUserControl1.webBrowser1.Document.MouseOver += new HtmlElementEventHandler(this.browserMouseMoved);
+                }
+            }
+            catch
             {
-                tabUserControl1.webBrowser1.Document.MouseOver += new HtmlElementEventHandler(this.browserMouseMoved);
+
             }
         }
 
