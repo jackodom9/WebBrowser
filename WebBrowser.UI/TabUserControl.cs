@@ -83,6 +83,14 @@ namespace WebBrowser.UI
         {
             toolStripProgressBar1.Maximum = (int)e.MaximumProgress;
             toolStripProgressBar1.Value = (int)e.CurrentProgress;
+            if (e.CurrentProgress == e.MaximumProgress)
+            {
+                toolStripStatusLabel1.Text = "done";
+            }
+            else
+            {
+                toolStripStatusLabel1.Text = "loading";
+            }
         }
     }
 }
