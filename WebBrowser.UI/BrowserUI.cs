@@ -153,6 +153,8 @@ namespace WebBrowser.UI
 
         private void printPageToolStripMenuItem_Click(object sender, EventArgs e)
         {
+           
+                tabUserControl1.webBrowser1.ShowPrintDialog();
         }
     }
 }

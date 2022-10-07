@@ -105,5 +105,6 @@ namespace WebBrowser.UI
         {
             webBrowser1.Navigate("www.google.com");
         }
+
     }
 }
