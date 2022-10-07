@@ -100,5 +100,10 @@ namespace WebBrowser.UI
         private void webBrowser1_Navigating(object sender, WebBrowserNavigatingEventArgs e)
         {
         }
+
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Navigate("www.google.com");
+        }
     }
 }

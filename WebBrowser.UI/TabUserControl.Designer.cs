@@ -101,6 +101,7 @@
             this.homeButton.Name = "homeButton";
             this.homeButton.Size = new System.Drawing.Size(24, 24);
             this.homeButton.Text = "toolStripButton1";
+            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
             // 
             // addressBarTextBox
             // 
@@ -168,7 +169,7 @@
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(252, 17);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(283, 17);
             this.toolStripStatusLabel2.Spring = true;
             this.toolStripStatusLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 

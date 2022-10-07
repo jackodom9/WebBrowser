@@ -150,5 +150,9 @@ namespace WebBrowser.UI
         {
             tabUserControl1.webBrowser1.ShowSaveAsDialog();
         }
+
+        private void printPageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

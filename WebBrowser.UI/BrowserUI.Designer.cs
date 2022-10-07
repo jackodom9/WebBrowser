@@ -43,8 +43,8 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabUserControl1 = new WebBrowser.UI.TabUserControl();
             this.addTab = new System.Windows.Forms.TabPage();
+            this.tabUserControl1 = new WebBrowser.UI.TabUserControl();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -102,6 +102,7 @@
             this.printPageToolStripMenuItem.Name = "printPageToolStripMenuItem";
             this.printPageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.printPageToolStripMenuItem.Text = "Print Page";
+            this.printPageToolStripMenuItem.Click += new System.EventHandler(this.printPageToolStripMenuItem_Click);
             // 
             // exitWebBrowserToolStripMenuItem
             // 
@@ -184,6 +185,16 @@
             this.tabPage1.Text = "Home       ";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // addTab
+            // 
+            this.addTab.Location = new System.Drawing.Point(4, 22);
+            this.addTab.Name = "addTab";
+            this.addTab.Padding = new System.Windows.Forms.Padding(3);
+            this.addTab.Size = new System.Drawing.Size(592, 316);
+            this.addTab.TabIndex = 1;
+            this.addTab.Text = "Add Tab       ";
+            this.addTab.UseVisualStyleBackColor = true;
+            // 
             // tabUserControl1
             // 
             this.tabUserControl1.BackColor = System.Drawing.Color.White;
@@ -194,16 +205,6 @@
             this.tabUserControl1.Size = new System.Drawing.Size(588, 312);
             this.tabUserControl1.TabIndex = 0;
             this.tabUserControl1.Load += new System.EventHandler(this.tabUserControl1_Load);
-            // 
-            // addTab
-            // 
-            this.addTab.Location = new System.Drawing.Point(4, 22);
-            this.addTab.Name = "addTab";
-            this.addTab.Padding = new System.Windows.Forms.Padding(3);
-            this.addTab.Size = new System.Drawing.Size(592, 316);
-            this.addTab.TabIndex = 1;
-            this.addTab.Text = "Add Tab       ";
-            this.addTab.UseVisualStyleBackColor = true;
             // 
             // BrowserUI
             // 
