@@ -145,5 +145,10 @@ namespace WebBrowser.UI
             e.Graphics.DrawString(this.tabControl1.TabPages[e.Index].Text, e.Font, Brushes.Black, e.Bounds.Left + 12, e.Bounds.Top + 4);
             e.DrawFocusRectangle();
         }
+
+        private void savePageAsHTMLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tabUserControl1.webBrowser1.ShowSaveAsDialog();
+        }
     }
 }
