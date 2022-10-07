@@ -156,5 +156,21 @@ namespace WebBrowser.UI
            
                 tabUserControl1.webBrowser1.ShowPrintDialog();
         }
+
+        private void tabPage1_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+
+
+        private void tabPage1_DragOver(object sender, DragEventArgs e)
+        {
+
+        }
+
+        private void tabPage1_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }
