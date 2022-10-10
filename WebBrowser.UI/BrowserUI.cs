@@ -23,11 +23,13 @@ namespace WebBrowser.UI
 
         }
 
+        // toolstrip menu item to exit application
         private void exitWebBrowserToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        // toolstrip menu item to display some basic information about app and creator
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string message = "This is a tool for users to browse different web pages. " +
@@ -47,6 +49,7 @@ namespace WebBrowser.UI
 
         }
 
+        // allows for CTRL & T to open a new tab and CTRL & W to close the current tab
         private void BrowserUI_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Control && (e.KeyCode == Keys.T))
@@ -60,6 +63,7 @@ namespace WebBrowser.UI
             }
         }
 
+        // toolstrip menu item to create new tab
         private void newTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TabPage newTab = new TabPage("New Tab        ");
@@ -70,6 +74,7 @@ namespace WebBrowser.UI
             this.tabControl1.TabPages.Insert(lastIndex, newTab);
         }
 
+        // toolstrip menu item to close current tab
         private void closeCurrentTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.tabControl1.TabPages.RemoveAt(this.tabControl1.SelectedIndex);
@@ -80,18 +85,21 @@ namespace WebBrowser.UI
 
         }
 
+        // toolstrip menu item to open history manager
         private void manageHistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HistoryManagerForm historyManagerForm = new HistoryManagerForm();
             historyManagerForm.ShowDialog();
         }
 
+        // toolstrip menu item to open boomark manager
         private void manageBookmarksToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BookmarkManagerForm bookmarkManagerForm = new BookmarkManagerForm();
             bookmarkManagerForm.ShowDialog();
         }
 
+        // when hovering over a link, display the link in the bottom right hand corner of string
         private void browserMouseMoved(object sender, HtmlElementEventArgs e)
         {
             string element = tabUserControl1.webBrowser1.Document.GetElementFromPoint(e.ClientMousePosition).GetAttribute("href");
@@ -99,6 +107,7 @@ namespace WebBrowser.UI
             tabUserControl1.toolStripStatusLabel2.Text = "Link = " + element;
         }
 
+        // accessory method for link display
         private void BrowserUI_MouseMove(object sender, MouseEventArgs e)
         {
             try 
@@ -114,11 +123,13 @@ namespace WebBrowser.UI
             }
         }
 
+        // toolstrip menu item to clear history
         private void clearHistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HistoryManager.ClearItems();
         }
 
+        // makes last tab a button to open new tabs
         private void tabControl1_MouseDown(object sender, MouseEventArgs e)
         {
             var lastIndex = this.tabControl1.TabCount - 1;
@@ -139,6 +150,7 @@ namespace WebBrowser.UI
             }
         }
 
+        // draws "x" buttons on tabs for closing
         private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
         {
             e.Graphics.DrawString("x", e.Font, Brushes.Black, e.Bounds.Right - 15, e.Bounds.Top + 4);
@@ -146,11 +158,14 @@ namespace WebBrowser.UI
             e.DrawFocusRectangle();
         }
 
+        // toolstrip menu item to save page as html
         private void savePageAsHTMLToolStripMenuItem_Click(object sender, EventArgs e)
         {
             tabUserControl1.webBrowser1.ShowSaveAsDialog();
         }
 
+
+        // toolstrip menu item to print page
         private void printPageToolStripMenuItem_Click(object sender, EventArgs e)
         {
            

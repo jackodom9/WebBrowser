@@ -18,11 +18,13 @@ namespace WebBrowser.UI
             InitializeComponent();
         }
 
+        // go button to navigate to url that was input
         private void goButton_Click(object sender, EventArgs e)
         {
             webBrowser1.Navigate(addressBarTextBox.Text);
         }
 
+        // on enter key allows for same functionality as go button
         private void addressBarTextBox_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -31,21 +33,25 @@ namespace WebBrowser.UI
             }
         }
 
+        // refreshes the currently displayed webpage
         private void refreshButton_Click(object sender, EventArgs e)
         {
             webBrowser1.Refresh();
         }
 
+        // goes to the previous history item visited in web browser
         private void backButton_Click(object sender, EventArgs e)
         {
             webBrowser1.GoBack();
         }
 
+        // goes to the next history item visited in web browser
         private void forwardButton_Click(object sender, EventArgs e)
         {
             webBrowser1.GoForward();
         }
 
+        // bookmarks the currently selected page
         private void bookmarksButton_Click(object sender, EventArgs e)
         {
             if (webBrowser1.DocumentTitle != "")
@@ -73,6 +79,7 @@ namespace WebBrowser.UI
             }
         }
 
+        // on navigation to a webpage, add said web page to history database
         private void webBrowser1_Navigated(object sender, WebBrowserNavigatedEventArgs e)
         {
             var item = new HistoryItem();
@@ -83,6 +90,7 @@ namespace WebBrowser.UI
 
         }
 
+        // loading bar and status message to reflect the status of the web page
         private void webBrowser1_ProgressChanged(object sender, WebBrowserProgressChangedEventArgs e)
         {
             toolStripProgressBar1.Maximum = (int)e.MaximumProgress;
@@ -101,6 +109,7 @@ namespace WebBrowser.UI
         {
         }
 
+        // home button navigates to search browser
         private void homeButton_Click(object sender, EventArgs e)
         {
             webBrowser1.Navigate("www.google.com");

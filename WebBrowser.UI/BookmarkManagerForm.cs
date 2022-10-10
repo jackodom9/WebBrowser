@@ -18,6 +18,7 @@ namespace WebBrowser.UI
             InitializeComponent();
         }
 
+        // on load, populate bookmarkmanager gui from database
         private void BookmarkManagerForm_Load(object sender, EventArgs e)
         {
             var items = BookmarkManager.GetItems();
@@ -35,6 +36,7 @@ namespace WebBrowser.UI
 
         }
 
+        // search function for gui, not case-sensitive
         private void btnBookmarkSearch_Click(object sender, EventArgs e)
         {
             var items = BookmarkManager.GetItems();
@@ -51,6 +53,7 @@ namespace WebBrowser.UI
             }
         }
 
+        // gui button to delete an item from the bookmark manager gui and database
         private void btnBookmarkDelete_Click(object sender, EventArgs e)
         {
             string itemStr = (string)listBoxBookmarkManager.SelectedItem;
@@ -61,6 +64,7 @@ namespace WebBrowser.UI
             listBoxBookmarkManager.Items.RemoveAt(listBoxBookmarkManager.SelectedIndex);
         }
 
+        // accessory method to aid searching when iterating through bookmarks
         private string getSubStringFromString(string begin, string end, string result)
         {
             return result.Substring((result.IndexOf(begin) + begin.Length), (result.IndexOf(end) - result.IndexOf(begin) - begin.Length));

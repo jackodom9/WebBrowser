@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebBrowser.Logic
 {
+    // class to store items in History database
     public class HistoryItem
     {
         public int Id { get; set; }

@@ -10,12 +10,14 @@ namespace WebBrowser.Logic
 {
     public class BookmarkManager
     {
+        // method to add item to bookmarks database
         public static void AddItem(BookmarkItem item)
         {
             var adapter = new BookmarksTableAdapter();
             adapter.Insert(item.URL, item.Title);
         }
 
+        // method to retrieve all items from bookmarks database
         public static List<BookmarkItem> GetItems()
         {
             var adapter = new BookmarksTableAdapter();
@@ -31,6 +33,7 @@ namespace WebBrowser.Logic
             return results;
         }
 
+        // method to remove item from database
         public static void DeleteItem(int Id, string Title, string URL)
         {
             var adapter = new BookmarksTableAdapter();

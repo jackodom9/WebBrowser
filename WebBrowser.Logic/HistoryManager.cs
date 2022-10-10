@@ -9,12 +9,14 @@ namespace WebBrowser.Logic
 {
     public class HistoryManager
     {
+        // method to add item to history database
         public static void AddItem(HistoryItem item)
         {
             var adapter = new HistoryTableAdapter();
             adapter.Insert(item.Title, item.URL, item.Date);
         }
 
+        // method to retrieve items from history database
         public static List<HistoryItem> GetItems()
         {
             var adapter = new HistoryTableAdapter();
@@ -32,6 +34,7 @@ namespace WebBrowser.Logic
             return results;
         }
 
+        // method to remove all items from history database
         public static void ClearItems()
         {
             var adapter = new HistoryTableAdapter();
@@ -43,6 +46,7 @@ namespace WebBrowser.Logic
             adapter.Update(rows);
         }
 
+        // method to delete a singular item from history database
         public static void DeleteItem(int Id, string Title, string URL, DateTime Date)
         {
             var adapter = new HistoryTableAdapter();
